@@ -1,5 +1,6 @@
-console.log(products.avion.nbPieces);
-console.log(products.length);
+// console.log(products.avion.nbPieces);
+// console.log(products['avion']['nbPieces']);
+// console.log(products.length); undefined
 
 //Liste de tous les produits présent dans products.js ['avion','dinosaure',...]
 const listProducts = [];
@@ -15,46 +16,51 @@ for (const product in products) {
     }
 };
 
-//balise de la page produit
+//balises de la page produit
 const mainProduct = document.getElementById("mainProduct");
 const containerProduct = document.getElementById("containerProduct");
 const containerGrid = document.getElementById("containerGrid");
 //liste des div productFav
 const productFav = document.querySelectorAll(".productFav");
 
+//Dans containerProduct créé le html pour afficher le produit selectionné
 function createProductInfo(){
+    //Produit selectionné par défaut
     const fav = products['avion'];
 
+    //Nom du produit
     let newH = document.createElement("h2");
     newH.setAttribute("id", `containerProductName`);
     newH.innerHTML = fav.nom;
 
+    //Image du produit
     let newImg = document.createElement("img");
     newImg.setAttribute("id", `imgContainerProduct`);
     newImg.setAttribute("src", `img/${fav.img}`);
 
+    //Liste des informations du produit
     let newOl = document.createElement("ol");
-
+    //Nom
     let newItemNom = document.createElement("li");
     newItemNom.setAttribute("id", `containerProductNom`);
     newItemNom.innerHTML = fav.nom;
     newOl.appendChild(newItemNom);
-
+    //Nom du créateur
     let newItemNomCreator = document.createElement("li");
     newItemNomCreator.setAttribute("id", `containerProductNomCreator`);
     newItemNomCreator.innerHTML = `Creator: ${fav.nomCreator}`;
     newOl.appendChild(newItemNomCreator);
-
+    //Nombre de pieces
     let newItemNbPieces = document.createElement("li");
     newItemNbPieces.setAttribute("id", `containerProductNbPieces`);
     newItemNbPieces.innerHTML = `Pieces: ${fav.nbPieces}`;
     newOl.appendChild(newItemNbPieces);
-
+    //Prix
     let newItemPrice = document.createElement("li");
     newItemPrice.setAttribute("id", `containerProductPrice`);
     newItemPrice.innerHTML = `Price: ${fav.price}`;
     newOl.appendChild(newItemPrice);
-
+    //Bouton commander
     let newBtnCommande = document.createElement("button");
     newBtnCommande.setAttribute("id", `containerBtn`);
     newBtnCommande.innerHTML = `Commander`;
@@ -66,7 +72,10 @@ function createProductInfo(){
 }
 //création du code html pour les produits favoris, n fois
 function createFav(n){
+    //condition de sortie
     if(n===0) return;
+    //Si n est trop grand on le ramène à la plus haute valeur possible
+    if(n>listProductsFav.length) n= listProductsFav.length;
 
     //return l'objet fav d'indice n-1
     const fav = products[listProductsFav[n-1]];
@@ -74,14 +83,14 @@ function createFav(n){
     let newDiv = document.createElement("div");
     newDiv.setAttribute("id", `product${n}`);
     newDiv.setAttribute("class", "productFav");
-
+    //Nom
     let newH = document.createElement("h2");
     newH.innerHTML = fav.nom;
-
+    //Image
     let newImg = document.createElement("img");
     newImg.setAttribute("id", `img_product${n}`);
     newImg.setAttribute("src", `img/${fav.img}`);
-
+    //Liste des informations du produit
     let newOl = document.createElement("ol");
     let newItemNom = document.createElement("li");
     newItemNom.innerHTML = fav.nom;
@@ -95,7 +104,7 @@ function createFav(n){
     let newItemPrice = document.createElement("li");
     newItemPrice.innerHTML = `Price: ${fav.price}`;
     newOl.appendChild(newItemNom);
-
+    //Btn de commande
     let newBtnCommande = document.createElement("button");
     newBtnCommande.setAttribute("id", `FavBtn${n}`);
     newBtnCommande.innerHTML = `Commander`;
@@ -121,7 +130,6 @@ for (const product in products) {
     let newCellImg = document.createElement("img");
     newCellImg.setAttribute("src", `img/${products[product].img}`);
     newCellImg.setAttribute("alt", product);
-    //newCellImg.setAttribute("onclick", "changeSelectProduct()");
 
     containerGrid.appendChild(newCell).appendChild(newCellImg);
 };
@@ -130,10 +138,12 @@ for (const product in products) {
 let selectedProduct;
 //fonction appelé sur le clic d'une image, actualise le produit visualisé par l'utilisateur.
 function changeSelectProduct(e){
+    //Recuperation de l'objet cliqué
     let selection = e.target.alt;
     selectedProduct = selection;
 
     console.log(products[selection].img);
+    //Changement des valeurs affiché dans containerProduct
     document.getElementById("containerProductName").innerHTML = products[selection].nom;
     document.getElementById("imgContainerProduct").src = `img/${products[selection].img}`;
     document.getElementById("containerProductNom").innerHTML = `Produit: ${products[selection].nom}`;
@@ -142,10 +152,9 @@ function changeSelectProduct(e){
     document.getElementById("containerProductPrice").innerHTML = `Price: ${products[selection].price}`;
 };
 
-
+//Liste des cellules de la grille d'image
 const listCell = document.querySelectorAll(".cell");
-console.log(listCell);
-
+//Création de l'événement click sur chaque cellule
 for(let item in listCell){
     document.addEventListener("click", function(e) {
         changeSelectProduct(e)

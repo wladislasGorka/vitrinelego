@@ -1,0 +1,17 @@
+Site partenaire Lego pour la vente de créations originales par des particuliers.
+
+Le site est un regroupement d'oeuvres réalisées en légo par des particuliers désireux de mettre en boite leur création afin de pouvoir permettre à d'autre de la réaliser. 
+Le site met donc en avant le fait de mettre en boite et d'éditer un livret de montage conforme à la création de l'artiste.
+
+La navigation sur le site s'effectura via un menu de navigation simple présent en haut du site avec un lien hypertext par pages du site (c'est à dire trois liens pour trois pages).
+
+Une page d'acceuil attractive permettra de mettre en avant la thématique de la vitrine en exposant l'un des produits en fond.
+
+Une page produit, permettra d'accéder à l'ensemble des oeuvres.
+En haut de page, deux oeuvres seront mises en avant alors que les autres seront répertoriées sous forme de grille où seul un visuel sera proposé.
+Cependant, le clic de l'un des visuels permettra d'ouvrir un détail des informations du produit ciblé (date de création, identité du créateur ou des créateurs).
+En bas de page, un icone flêché fixe, renvera en haut de la page.
+
+Enfin une page de contact mettra en avant le propriètaire du site, un peu de son identité (nom, prénom, nationalité, photo) et surtout sa motivation à créer une telle vitrine. 
+Cette page fournira également des informations nécessaire pour joindre le propriètaire du site via mail et réseaux sociaux (X,facebook,instagram), pour permettre au utilisateur de soumettre leur propre création.
+

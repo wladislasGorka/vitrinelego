@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lego Create</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="products.js" defer></script>
+        <script src="main.js" defer></script>
+    </head>
+    <body>
+        <nav id="nav">
+            <div id="nav_products"><a href="products.html">Products</a></div>
+            <div id="nav_logo"><a href="index.html"><img id="nav_imgLogo" src="img/logo1.jfif" alt="logo image"></a></div>
+            <div id="nav_contacts"><a href="contacts.html">Contacts</a></div>
+        </nav>
+
+        <main>
+            <div id="contact">
+                <h2>A propos de moi</h2>
+                <p>Passionné de LEGO depuis tout petit, je ne cesse de m'émerveiller face à toutes les possibilités qu'offre de simples briques de plastique.<br>
+                Je répondrais avec plaisir à toutes vos interrogations.
+                </p>
+                <form action="" method="get" class="contactForm">
+                    <div class="contactForm">
+                      <label for="name">Votre nom: </label><br>
+                      <input type="text" name="name" id="name" required />
+                    </div>
+                    <div class="contactForm">
+                      <label for="email">Votre email: </label><br>
+                      <input type="email" name="email" id="email" required />
+                    </div>
+                    <div class="contactForm">
+                        <label for="comment">Votre commentaire: </label><br>
+                        <textarea name="comment" id="comment" rows="5" cols="33" required></textarea>
+                    </div>
+                    <div class="contactForm">
+                      <input type="submit" value="Envoyer" />
+                    </div>
+                  </form>
+            </div>
+            <div id="soumission">
+                <h2>Formulaire de Soumission</h2>
+                <p>Vous voulez mettre en boite votre réalisation personnel et la partagé avec la communauté en l'ajoutant à notre catalogue?<br>
+                On s'occupe de tout, de la boite au livret de montage.<br>
+                Remplissez ce formulaire est on vous recontactera pour discuter de votre projet.
+                </p>
+                <form action="" method="get" class="soumissionForm"></form>
+                    <div class="soumissionForm">
+                      <label for="name">Votre nom: </label><br>
+                      <input type="text" name="name" id="soumissionName" required />
+                    </div>
+                    <div class="soumissionForm">
+                      <label for="email">Votre email: </label><br>
+                      <input type="email" name="email" id="soumissionEmail" required />
+                    </div>
+                    <div class="soumissionForm">
+                        <label for="modele">Votre modele: </label><br>
+                        <input type="text" name="modele" id="soumissionMmodele" required />
+                    </div>
+                    <div class="soumissionForm">
+                        <label for="nbPieces">nombre de pieces: </label><br>
+                        <input type="text" name="nbPieces" id="soumissionNbPieces" required />
+                    </div>
+                    <div class="soumissionForm">
+                        <label for="comment">Votre commentaire: </label><br>
+                        <textarea name="comment" id="soumissionComment" rows="5" cols="33" required></textarea>
+                    </div>
+                    <div class="soumissionForm">
+                      <input type="submit" value="Envoyer" />
+                    </div>
+                  </form>
+            </div>
+        </main>
+        <footer>
+            <p>LegoCreate<br> 03 place du 14 juillet<br> 34500 Béziers<br> FRANCE<br> mymail@gmail.com</p>
+        </footer>
+    </body>
+</html>

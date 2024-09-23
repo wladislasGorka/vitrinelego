@@ -1,0 +1,102 @@
+body{
+    color: white;
+    background-image: url("img/fond2.jpg"); 
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+}
+a{
+    outline: none;
+    text-decoration: none;
+}
+a:visited {
+    color: white;
+}
+
+#nav{
+    background-color: rgba(0,0,0,0.5);
+    width: 200px;
+    align-items: center;
+    justify-content: center;
+}
+#nav > div{
+    
+    display: inline-block;
+    vertical-align: middle;
+}
+#nav_imgLogo{
+    width: 50px;
+}
+
+main > div{
+    /* background-color: rgba(0,0,0,0.5); */
+    width: 40%;
+    display: inline-block;
+    vertical-align: middle;
+}
+main > div.productFav{
+    /* background-color: rgba(0,0,0,0.5); */
+    width: 30%;
+    margin-right: 3%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.productFav > img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#img_acceuil{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#container > div {
+    /* background-color: rgba(0,0,0,0.5); */
+    display: inline-block;
+    vertical-align: middle;
+}
+#containerProduct{
+    width: 35%
+}
+#imgContainerProduct{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#container{
+    margin-top: 50px;
+}
+#containerGrid{
+    padding: 5px;
+    margin-left: 1%;
+    display: inline-block;
+    width: 60%;
+}
+#containerGrid > div{
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+}
+.cell > img{
+    width: 140px;
+    height: 140px;
+    padding: 5px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#contact,#soumission{
+    width: 45%;
+}
+
+#soumission{
+    margin-left: 5%;
+}
+footer{
+    margin-top: 50px;
+    font-size: xx-small;
+}
+ol {
+    list-style: none;
+  }
